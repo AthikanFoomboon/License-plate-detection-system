@@ -1,0 +1,41 @@
+// npx prisma migrate dev --name applink_database
+// npx prisma migrate reset
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider          = "mysql"
+  url               = env("DATABASE_URL")
+  shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
+}
+
+model User {
+  id          Int      @id @default(autoincrement())
+  email       String?
+  password    String?
+  village     String?
+  district    String?
+  subdistrict String?
+  province    String?
+  role        String   @default("admin")
+  cameras     Camera[] // ความสัมพันธ์ one-to-many ระหว่าง User กับ Camera
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Camera {
+  id             Int      @id @default(autoincrement())
+  ip             String?  @unique
+  cameraID       String?
+  password       String?
+  channel        String?
+  subtype        String?
+  way            String?
+  cameraPosition String? // เปลี่ยนจาก String[] เป็น Json
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  user           User?    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId         Int?
+}

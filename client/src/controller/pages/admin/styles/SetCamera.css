@@ -1,0 +1,141 @@
+:root {
+    --main-bg-color: #4a4a4a;
+    --form-bg-color: rgba(14, 14, 14, 0.8);
+    --text-color: #ffffff;
+    --placeholder-color: #8a8a8a;
+    --button-bg: #5CAF50;
+    --button-hover-bg: #4CAF50;
+    --alert-bg: #555555;
+    --alert-border: #666666;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+.set-camera-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding: 80px 20px 40px;
+}
+
+.set-camera-title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: var(--text-color);
+}
+
+.set-camera-form {
+    background-color: var(--form-bg-color);
+    color: var(--text-color);
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    width: 100%;
+    max-width: 600px;
+}
+
+.set-camera-form .ant-form-item-label > label {
+    color: var(--text-color) !important;
+    font-weight: 600;
+}
+
+.custom-alert {
+    background-color: var(--alert-bg);
+    color: var(--text-color);
+    border-color: var(--alert-border);
+    margin-bottom: 20px;
+}
+
+.custom-alert .anticon {
+    color: var(--text-color);
+}
+
+.custom-alert .ant-alert-message,
+.custom-alert .ant-alert-description {
+    color: var(--text-color);
+}
+
+.submit-button {
+    background-color: var(--button-bg);
+    border-color: var(--button-bg);
+    color: var(--text-color);
+    width: 100%;
+}
+
+.submit-button:hover,
+.submit-button:focus {
+    background-color: var(--button-hover-bg);
+    border-color: var(--button-hover-bg);
+}
+
+.set-camera-form .ant-input::placeholder,
+.set-camera-form .ant-input-password::placeholder,
+.set-camera-form .ant-cascader-picker::placeholder {
+    color: var(--placeholder-color);
+    opacity: 1;
+}
+
+.set-camera-form .ant-input::-webkit-input-placeholder,
+.set-camera-form .ant-input-password::-webkit-input-placeholder,
+.set-camera-form .ant-cascader-picker::-webkit-input-placeholder,
+.set-camera-form .ant-input:-moz-placeholder,
+.set-camera-form .ant-input-password:-moz-placeholder,
+.set-camera-form .ant-cascader-picker:-moz-placeholder,
+.set-camera-form .ant-input::-moz-placeholder,
+.set-camera-form .ant-input-password::-moz-placeholder,
+.set-camera-form .ant-cascader-picker::-moz-placeholder,
+.set-camera-form .ant-input:-ms-input-placeholder,
+.set-camera-form .ant-input-password:-ms-input-placeholder,
+.set-camera-form .ant-cascader-picker:-ms-input-placeholder {
+    color: var(--placeholder-color);
+}
+
+.ip-input-container .ant-form-item-feedback-icon .anticon {
+    color: var(--text-color);
+}
+
+.set-camera-form .ant-cascader-menu {
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+}
+
+.set-camera-form .ant-cascader-menu-item:hover {
+    background-color: var(--alert-bg);
+}
+
+.set-camera-form .ant-cascader-dropdown::-webkit-scrollbar {
+    width: 8px;
+}
+
+.set-camera-form .ant-cascader-dropdown::-webkit-scrollbar-thumb {
+    background-color: #777777;
+    border-radius: 4px;
+}
+
+.set-camera-form .ant-cascader-dropdown::-webkit-scrollbar-track {
+    background-color: var(--main-bg-color);
+}
+
+.set-camera-form .ant-input:focus,
+.set-camera-form .ant-input-password:focus,
+.set-camera-form .ant-cascader-picker-focused {
+    border-color: var(--button-bg);
+    box-shadow: 0 0 0 2px rgba(90, 202, 50, 0.2);
+}
+
+.submit-button-container {
+    text-align: center;
+}
+
+.ip-input-container .ant-input {
+    padding-right: 30px;
+}
+
+.ip-input-container .anticon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}

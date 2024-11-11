@@ -1,0 +1,37 @@
+/* src/layout/styles/MenuBar.css */
+
+/* ทำให้เมนูติดอยู่ด้านบนสุด */
+.custom-menu-bar {
+    position: fixed; /* ติดอยู่กับตำแหน่งที่กำหนด */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* ให้เมนูอยู่ด้านบนสุด */
+    background-color: rgba(0, 0, 0, 0.8); /* สีพื้นหลังแบบโปร่งใส */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* เงาเพื่อความสวยงาม */
+}
+
+/* ปรับสีของเมนูที่ถูกเลือก */
+.custom-menu-bar .ant-menu-item-selected {
+    background-color: #444444 !important; /* เปลี่ยนสีพื้นหลังเมื่อถูกเลือก */
+}
+
+/* ปรับสีของเมนูเมื่อ hover */
+.custom-menu-bar .ant-menu-item:hover {
+    background-color: #555555 !important; /* เปลี่ยนสีพื้นหลังเมื่อ hover */
+}
+
+/* ปรับสีของไอคอน */
+.custom-menu-bar .ant-menu-item-icon {
+    color: #ffffff !important; /* สีของไอคอน */
+}
+
+/* ปรับสีของข้อความเมนู */
+.custom-menu-bar .ant-menu-item > a {
+    color: #ffffff !important; /* สีของข้อความเมนู */
+}
+
+/* ปรับสีของข้อความเมนูเมื่อถูกเลือก */
+.custom-menu-bar .ant-menu-item-selected > a {
+    color: #ffffff !important; /* สีของข้อความเมนูเมื่อถูกเลือก */
+}

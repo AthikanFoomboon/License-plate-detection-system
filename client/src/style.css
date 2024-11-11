@@ -1,0 +1,13 @@
+
+/* Reset และพื้นฐาน */
+html, body {
+    background-color: #1b1b1d; /* ตั้งพื้นหลังของหน้าเว็บเป็นสี #1b1b1d */
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}

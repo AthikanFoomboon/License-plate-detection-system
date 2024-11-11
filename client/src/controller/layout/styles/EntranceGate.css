@@ -1,0 +1,304 @@
+/* src/layout/styles/EntranceGate.css */
+
+/* คอนเทนเนอร์หลัก */
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    background-color: #d8d8d8; /* ตั้งพื้นหลังของคอนเทนเนอร์เป็นสี #1b1b1d */
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5); /* เพิ่มความลึกให้เงา */
+    height: auto; /* ปรับความสูงให้เหมาะสมกับเนื้อหา */
+    overflow: hidden;
+    padding: 20px; /* เพิ่ม padding ภายในคอนเทนเนอร์ */
+    margin: 20px auto; /* จัดกึ่งกลางคอนเทนเนอร์บนหน้าเว็บ */
+}
+
+/* คอนเทนเนอร์วิดีโอ */
+.video {
+    grid-column: 1 / 2;
+    position: relative;
+    background-color: #000; /* เปลี่ยนพื้นหลังของวิดีโอเป็นสีดำ */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto; /* ปรับความสูงให้เหมาะสมกับเนื้อหา */
+    aspect-ratio: 16 / 9; /* คงอัตราส่วน 16:9 */
+}
+
+/* คอนเทนเนอร์ภายในวิดีโอ */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* การตั้งค่าวิดีโอ */
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ปรับให้ครอบคลุมพื้นที่ทั้งหมดโดยคงสัดส่วน */
+    border-radius: 8px;
+}
+
+/* ไอคอนบันทึกภาพหน้าจอ */
+.save-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.2); /* ปรับพื้นหลังให้โปร่งใสขึ้น */
+    color: #e0e0e0; /* เปลี่ยนสีไอคอนให้เข้ากับพื้นหลังใหม่ */
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    z-index: 10;
+}
+
+.save-icon:hover {
+    transform: scale(1.2);
+    background-color: rgba(255, 255, 255, 0.4); /* เปลี่ยนพื้นหลังเมื่อ hover */
+}
+
+/* ไอคอนรีเฟรชหน้า */
+.refresh-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(255, 255, 255, 0.2); /* ปรับพื้นหลังให้โปร่งใสขึ้น */
+    color: #e0e0e0; /* เปลี่ยนสีไอคอนให้เข้ากับพื้นหลังใหม่ */
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    z-index: 10;
+}
+
+.refresh-icon:hover {
+    transform: scale(1.2);
+    background-color: rgba(255, 255, 255, 0.4); /* เปลี่ยนพื้นหลังเมื่อ hover */
+}
+
+/* คอนเทนเนอร์ด้านขวา */
+.in-container {
+    grid-column: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* ปรับขนาดให้เต็มความสูงของ grid cell */
+    padding: 10px;
+    background:#323234; /* เพิ่มพื้นหลังโปร่งใส */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* ข้อความทางด้านขวา */
+.way {
+    color: #ffffff; /* เปลี่ยนสีข้อความเป็นสีขาว */
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* เพิ่มเงาให้ข้อความ */
+}
+
+/* ภาพในคอนเทนเนอร์ */
+.fucus {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.fucus img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* กล่องแสดงผลลัพธ์ */
+.box1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ffffff; /* เปลี่ยนสี border เป็นสีขาว */
+    border-radius: 8px;
+    height: 100px;
+    padding: 20px;
+    background-color: #333333; /* เปลี่ยนพื้นหลังเป็นสีเทาเข้ม */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.box1 p {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffffff; /* เปลี่ยนสีข้อความเป็นสีขาว */
+    margin: 0;
+}
+
+/* กล่องอื่น ๆ ที่ใช้ใน grid */
+.box2, .box7, .box8 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box2 {
+    grid-column: 2 / 3;
+    height: 100%; /* ให้ .box2 เต็มความสูงของ grid cell */
+    padding: 10px;
+}
+
+/* กล่องเพิ่มเติม */
+.box7 {
+    grid-column: 1 / 3;
+}
+
+.box8 {
+    grid-column: 2 / 3;
+}
+
+/* ปุ่มต่าง ๆ */
+.toggle-button, .stop-button, .start-button {
+    width: 100%;
+    height: 100%;
+    color: #1b1b1d; /* เปลี่ยนสีตัวอักษรให้เข้ากับพื้นหลัง */
+    border: none;
+    font-size: 1.2rem; /* ขนาดตัวอักษรใหญ่ขึ้น */
+    font-weight: bold; /* ตัวหนา */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #4CAF50, #45a049); /* ใช้ gradient */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* ปรับเงาให้เข้ากับพื้นหลัง */
+    border-radius: 8px;
+}
+
+.toggle-button:hover {
+    background: linear-gradient(135deg, #45a049, #4CAF50); /* เปลี่ยนทิศทาง gradient */
+    transform: translateY(-3px) scale(1.05); /* เพิ่มการยกและขยาย */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4); /* เพิ่มเงา */
+}
+
+.toggle-button:active {
+    transform: translateY(0) scale(1); /* กลับสู่ตำแหน่งเดิม */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* กลับสู่เงาเดิม */
+}
+
+.stop-button {
+    background: linear-gradient(135deg, #ff4e50, #f9d423); /* ใช้ gradient สำหรับปุ่มหยุด */
+}
+
+.stop-button:hover {
+    background: linear-gradient(135deg, #f9d423, #ff4e50); /* เปลี่ยนทิศทาง gradient */
+    transform: scale(1.05);
+}
+
+.start-button {
+    background: linear-gradient(135deg, #00c6ff, #0072ff); /* ใช้ gradient สำหรับปุ่มเริ่มต้น */
+}
+
+.start-button:hover {
+    background: linear-gradient(135deg, #0072ff, #00c6ff); /* เปลี่ยนทิศทาง gradient */
+    transform: scale(1.05);
+}
+
+/* กล่องแสดงข้อมูลเพิ่มเติม */
+.box3 {
+    grid-column: 1 / 3;
+    padding: 20px;
+    background-color: #1b1b1d; /* เปลี่ยนพื้นหลังเป็นสี #1b1b1d */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* ใช้เงาแบบโปร่งใส */
+    overflow: auto;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #333333; /* เปลี่ยนพื้นหลังของฟุตเตอร์เป็นสีเทาเข้ม */
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.box4, .box5, .box6 {
+    height: 50px;
+    width: 150px;
+    background-color: #444444; /* เปลี่ยนสีพื้นหลังให้เข้ากับธีมใหม่ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3); /* ปรับเงาให้เข้ากับพื้นหลัง */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box4:hover, .box5:hover, .box6:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* ปรับเงาให้เข้ากับพื้นหลัง */
+}
+
+p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #e0e0e0; /* เปลี่ยนสีตัวอักษรให้เข้ากับพื้นหลัง */
+    margin: 0;
+}
+
+/* การปรับขนาดสำหรับอุปกรณ์ที่มีความกว้างน้อยกว่า 768px */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        height: auto;
+        padding: 10px;
+    }
+
+    .video {
+        margin-top: 10px;
+        width: 100%; /* ให้เต็มความกว้างบนหน้าจอเล็ก */
+        aspect-ratio: 16 / 9; /* คงอัตราส่วน 16:9 */
+    }
+
+    .box2, .box7, .box8 {
+        grid-column: 1 / 2;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .way {
+        font-size: 2rem;
+    }
+
+    .fucus {
+        height: 40%;
+    }
+
+    .toggle-button, .stop-button, .start-button {
+        height: 50px;
+        font-size: 1rem;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box4, .box5, .box6 {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+}
